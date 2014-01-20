@@ -6,19 +6,6 @@ import urllib, urllib2
 import json
 
 class GoogleDirections(object):
-    """
-        Usage
-        =====
-        >>> GoogleDirections().query("london","leeds").distance
-        >>> GoogleDirections().query("london","bristol", options={"mode": "bicycling"}).duration
-        
-        Options available are listed at:
-        https://developers.google.com/maps/documentation/directions/#DirectionsRequests
-
-        The whole JSON dict result will be in
-        >>> GoogleDirections().query("london","leeds").result
-    """
-
     url="http://maps.googleapis.com/maps/api/directions/json?origin=%s&destination=%s&sensor=false&"
     
     def __init__(self):
